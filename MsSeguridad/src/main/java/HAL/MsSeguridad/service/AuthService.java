@@ -1,5 +1,7 @@
 package HAL.MsSeguridad.service;
 
+import java.util.Optional;
+
 //import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,10 @@ public class AuthService {
         return authRepository.save(usuario);
     }
     
-    
+    public Optional<UsuarioModel> getById(int id){
+        return authRepository.findById(id);
+    }
+
 
 
 }
