@@ -15,5 +15,8 @@ public class AuthService {
     public UsuarioModel create(UsuarioModel usuario){
         return authRepository.save(usuario);
     }
+    
+    
+
 
 }
