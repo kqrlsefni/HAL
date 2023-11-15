@@ -43,7 +43,7 @@ public class AuthController {
         if (usuarioActualizado != null) {
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
-            // Puedes ajustar el mensaje y el código de estado según tus necesidades.
+            
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
