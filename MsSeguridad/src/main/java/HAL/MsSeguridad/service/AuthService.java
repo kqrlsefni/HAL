@@ -6,8 +6,9 @@ import java.util.Optional;
 //import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import HAL.MsSeguridad.repository.IAuthRepository;
+
 import HAL.MsSeguridad.model.UsuarioModel;
+import HAL.MsSeguridad.repository.IAuthRepository;
 
 @Service
 public class AuthService {
@@ -39,6 +40,18 @@ public class AuthService {
     
     public List<UsuarioModel> findByAll() {
         return (List<UsuarioModel>) authRepository.findAll();
+    }
+
+
+    public boolean eliminarUsuario(int id){
+        try{
+
+            authRepository.deleteById(id);
+            return true;
+        }catch(Exception arr){
+            return false;
+
+        }
     }
 
 
